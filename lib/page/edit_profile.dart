@@ -1,6 +1,5 @@
-
-import 'package:flutter/material.dart';
 import 'package:beeui1/page/homepage.dart';
+import 'package:flutter/material.dart';
 
 class EditProfile extends StatelessWidget {
   EditProfile({super.key});
@@ -9,11 +8,11 @@ class EditProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber[700],
+        backgroundColor: Color(0xFF2F3C7E),
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
-            color: Colors.black54,
+            color: Colors.white70,
           ),
           onPressed: () => {
             Navigator.push(context,
@@ -23,30 +22,29 @@ class EditProfile extends StatelessWidget {
         title: const Text(
           "Back To Home",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         actions: [
           IconButton(
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.black54,
-            ),
+            
             onPressed: () {
               // Implement any action when the menu icon is pressed
               // For example, you can open a menu drawer or show a popup menu
             },
+            icon: Image.asset('assets/images/menu.png',color: Colors.white70,),
+            iconSize: 20,
           ),
         ],
       ),
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xFFFBEAEB),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
             child: Column(
               children: [
                 const SizedBox(height: 40.0),
-                Image.asset('assets/images/Profile.png', height: 100),
+                Image.asset('assets/images/teamwork.png', height: 100),
                 const SizedBox(height: 20.0),
                 name(),
                 const SizedBox(height: 20.0),
@@ -66,18 +64,14 @@ class EditProfile extends StatelessWidget {
                         child: Container(
                           decoration: const BoxDecoration(
                               gradient: LinearGradient(
-                            colors: <Color>[
-                              Color(0xFFFFA500),
-                              Color(0xFFFF8C00),
-                              Color(0xFFFF7F50),
-                            ],
+                            colors: [Colors.blue, Colors.purple],
                           )),
                         ),
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(5),
-                          foregroundColor: Colors.black87,
+                          foregroundColor: Colors.white,
                           textStyle: const TextStyle(fontSize: 20),
                         ),
                         onPressed: () => {},
@@ -102,7 +96,7 @@ Widget name() => const Padding(
           labelStyle: TextStyle(color: Colors.grey),
           labelText: 'Enter Your Name',
           prefixIcon: Icon(Icons.person),
-          prefixIconColor: Colors.orangeAccent,
+          prefixIconColor: Color(0xFF2F3C7E),
           //suffixIcon: Icon(Icons.clear,),
           border: OutlineInputBorder(),
         ),
@@ -117,7 +111,7 @@ Widget nickname() => const Padding(
           labelStyle: TextStyle(color: Colors.grey),
           labelText: 'Nick Name',
           prefixIcon: Icon(Icons.emoji_people),
-          prefixIconColor: Colors.orangeAccent,
+          prefixIconColor: Color(0xFF2F3C7E),
           //suffixIcon: Icon(Icons.clear),
           border: OutlineInputBorder(),
         ),
@@ -133,7 +127,7 @@ Widget email() => const Padding(
           labelText: 'Enter your mail-id',
           hintText: 'example@gmail.com',
           prefixIcon: Icon(Icons.mail),
-          prefixIconColor: Colors.orangeAccent,
+          prefixIconColor: Color(0xFF2F3C7E),
           //suffixIcon: Icon(Icons.clear),
           border: OutlineInputBorder(),
         ),
@@ -149,10 +143,10 @@ Widget Dob() => const Padding(
           labelText: 'Date of Birth',
           hintText: 'day-Month-Year',
           prefixIcon: Icon(Icons.edit_calendar),
-          prefixIconColor: Colors.orangeAccent,
+          prefixIconColor:Color(0xFF2F3C7E),
           suffixIcon: Icon(
             Icons.arrow_drop_down_circle_rounded,
-            color: Colors.orange,
+            color: Color(0xFF2F3C7E),
           ),
           border: OutlineInputBorder(),
         ),
@@ -167,10 +161,10 @@ Widget Gender() => const Padding(
           labelStyle: TextStyle(color: Colors.grey),
           labelText: 'Gender',
           prefixIcon: Icon(Icons.person_add_alt),
-          prefixIconColor: Colors.orangeAccent,
+          prefixIconColor: Color(0xFF2F3C7E),
           suffixIcon: Icon(
             Icons.arrow_drop_down,
-            color: Colors.orange,
+            color: Color(0xFF2F3C7E),
           ),
           border: OutlineInputBorder(),
         ),
