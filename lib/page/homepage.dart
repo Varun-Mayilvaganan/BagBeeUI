@@ -1,5 +1,6 @@
 import 'package:beeui1/page/edit_profile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key});
@@ -101,13 +102,17 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           IconButton(
                             padding: EdgeInsets.only(left: 30),
-                            icon: Icon(Icons.edit_square,color: Color(0xFF2F3C7E),),
                             onPressed: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => EditProfile()));
                             },
+                            icon: Image.asset('assets/images/edit (1).png'),
+                            iconSize: 35,
+                        
+                  
+                      
                           ),
                         ],
                       ),
