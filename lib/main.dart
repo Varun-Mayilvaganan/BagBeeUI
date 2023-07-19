@@ -1,4 +1,4 @@
-import 'package:beeui1/page/homepage.dart';
+import 'package:beeui1/page/alreadysignin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: AlreadySignin()
     );
   }
 }
