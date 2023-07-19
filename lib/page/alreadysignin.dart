@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:beeui1/components/my_button.dart';
 class AlreadySignin extends StatelessWidget {
   const AlreadySignin({Key? key});
 
@@ -40,9 +40,39 @@ class AlreadySignin extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height:2),
                 Image.asset('assets/images/Welcome-Screen-Graphic.jpg',
-                height:300),
+                height:430,
+                ),
+                  SizedBox(height: 5),
+                MyButton(
+                  onTap: ()=>{},
+                ),
+                SizedBox(height:10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Already have an account?',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Urbanist',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20
+                      ),
+                    ),
+                    const SizedBox(width:4),
+                    Text(
+                      'Log in',
+                    style: TextStyle(
+                      color: Color(0xFFFC8019),
+                      fontFamily: 'Urbanist',
+                      fontWeight: FontWeight.w800,
+                    ),),
+
+                  ],
+                )
+                
               ],
             ),
           ),
