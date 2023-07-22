@@ -1,6 +1,7 @@
 import 'package:beeui1/page/edit_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:beeui1/page/bottom_nav.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key});
@@ -314,7 +315,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: BottomNavigator())
+            child: BottomNav())
         ]),
         
       ),
@@ -324,55 +325,3 @@ class _MyHomePageState extends State<MyHomePage> {
   
 }
 
-class BottomNavigator extends StatefulWidget {
-  const BottomNavigator({super.key});
-  
-  @override
-  State<BottomNavigator> createState() => _BottomNavigatorState();
-}
-
-class _BottomNavigatorState extends State<BottomNavigator> {
-    int _selectedIndex = 0;
-    Color pumpkin1 = Color(0xFF2F3C7E);
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-                  type: BottomNavigationBarType.fixed,
-                  currentIndex: _selectedIndex,
-                  onTap: _onItemTapped,
-                  selectedItemColor:pumpkin1,
-                  unselectedItemColor: Colors.grey,
-                  selectedIconTheme: IconThemeData(
-                    size: 50,
-                    grade: 34,
-                  ),
-                  items: const <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.home),
-                      label: 'Home',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.card_giftcard),
-                      label: 'Rewards',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.qr_code),
-                      label: 'Scan',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.timeline),
-                      label: 'Activity',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.account_circle),
-                      label: 'Account',
-                    ),
-                  ],
-                );
-  }
-}
