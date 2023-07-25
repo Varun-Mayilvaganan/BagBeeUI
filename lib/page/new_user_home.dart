@@ -130,8 +130,8 @@ class _NewUserHomeState extends State<NewUserHome> {
                 SizedBox(height: 10),
                 // Customized ListTiles
                 CustomizedListTile(
-                  imageAsset: 'assets/images/green.jpg',
-                  title: 'RM3 Voucher by Green Mart',
+                  imageAsset: 'assets/images/redmart.jpg',
+                  title: 'RM3 Voucher by RedMart',
                   subtitleLine1: 'Min. Spend:RM50',
                   subtitleLine2: 'Valid till: 30 June 2022',
                   trailing: ElevatedButton(
@@ -201,7 +201,6 @@ class _NewUserHomeState extends State<NewUserHome> {
     );
   }
 }
-
 class CustomizedListTile extends StatelessWidget {
   final String imageAsset;
   final String title;
@@ -220,45 +219,83 @@ class CustomizedListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10, // Customize the elevation here
+      color: Colors.white,
+      elevation: 10,
       child: SizedBox(
-        width: double.infinity, // Make the ListTile fill the entire width
-        height: 100, // Adjust the height as needed
+        width: double.infinity,
+        height: 100,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:2.0,vertical: 5.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
           child: Row(
             children: [
-              // Image
               Container(
                 width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                ),
                 child: Image.asset(imageAsset),
               ),
-              // Divider
               VerticalDivider(
                 color: Colors.grey,
                 thickness: 1,
                 width: 1,
               ),
-              // Text and Trailing Button
               Expanded(
                 child: ListTile(
-                  title: Text(title),
+                  title: Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(subtitleLine1),
-                      Text(subtitleLine2),
+                      Text(
+                        subtitleLine1,
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        subtitleLine2,
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                        ),
+                      ),
                     ],
                   ),
                   trailing: Container(
-                    height: 50, // Set the height to fit the content
+                    height: 50,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                     // Add spacing between text and button
-                        trailing,
+                        ElevatedButton(
+                          onPressed: () {
+                            // Handle button tap
+                          },
+                          child: Text(
+                            'Buy Now',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xFFFC8019),
+                            onPrimary: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                          ),
+                        ),
                       ],
                     ),
                   ),
