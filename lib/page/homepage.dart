@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                           height: 150,
                           child: Image.asset(
-                            'assets/images/man.png',
+                            'assets/images/male.png',
                           ),
                         ),
                         Column(
@@ -59,10 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                       vertical: 5, horizontal: 10),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(12),
-                                      color: Colors.amber[600]),
+                                      color: Colors.amber[100]),
                                   child: const Row(
                                     children: [
-                                      Icon(Icons.diamond),
+                                      ImageIcon(AssetImage('assets/images/history.png')),
                                       Text(
                                         '2,058',
                                         style: TextStyle(
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       vertical: 5, horizontal: 10),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(12),
-                                      color: Colors.amber[600]),
+                                      color: Colors.amber[100]),
                                   child: const Row(
                                     children: [
                                       Icon(Icons.shopping_bag_rounded),
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         IconButton(
                           padding: const EdgeInsets.only(left: 30),
-                          icon: const Icon(Icons.edit_document),
+                          icon: const Image(image: AssetImage('assets/images/edits.png')),
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             const Text(
                               ' My Vouchers',
                               style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.w700),
+                                  fontSize: 27, fontWeight: FontWeight.w700),
                             ),
                             Container(
                               color: Colors.transparent,
@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding:
                                   const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                               child: Container(
-                                child: Image.asset('assets/images/vou1.png'),
+                                child: Image.asset('assets/images/vou1.png',),
                               ),
                             ),
                           ],
@@ -194,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.amber[100],
+                        color: Colors.amber[50],
                         border: Border.all(
                           color: const Color.fromARGB(31, 100, 103, 103),
                           style: BorderStyle.solid,
@@ -204,10 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           const ListTile(
                              dense: true,
-                            leading: Icon(
-                              Icons.store_mall_directory_rounded,
-                              color: Colors.black,
-                            ),
+                            leading: ImageIcon(AssetImage('assets/images/Lastvisited.png'),color: Colors.black,),
                             title: Text('Last Visited',style: TextStyle(fontSize: 16),),
                             trailing: Icon(Icons.navigate_next_rounded),
                           ),
@@ -219,10 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           const ListTile(
                              dense: true,
-                            leading: Icon(  
-                              Icons.store_mall_directory_rounded,
-                              color: Colors.black,
-                            ),
+                            leading: ImageIcon(AssetImage('assets/images/historybee.png'),color: Colors.black,),
                             title: Text('Bee Point History',style: TextStyle(fontSize: 16),),
                             trailing: Icon(Icons.navigate_next_rounded),
                           ),
@@ -234,10 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           const ListTile(
                             dense: true,
-                            leading: Icon(
-                              Icons.store_mall_directory_rounded,
-                              color: Colors.black,
-                            ),
+                            leading: ImageIcon(AssetImage('assets/images/vouicon.png'),color: Colors.black,),
                             title: Text('Voucher History',style: TextStyle(fontSize: 16),),
                             trailing: Icon(Icons.navigate_next_rounded),
                           ),
@@ -263,7 +254,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.amber[100],
+                        color: Colors.amber[50],
                         border: Border.all(
                           color: const Color.fromARGB(31, 100, 103, 103),
                           style: BorderStyle.solid,
@@ -273,7 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           const ListTile(
                             leading: Icon(
-                              Icons.store_mall_directory_rounded,
+                              Icons.feedback,
                               color: Colors.black,
                             ),
                             title: Text('Feed Back',style: TextStyle(fontSize: 16),),
@@ -286,10 +277,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             endIndent: 20,
                           ),
                           const ListTile(
-                            leading: Icon(
-                              Icons.store_mall_directory_rounded,
-                              color: Colors.black,
-                            ),
+                            leading: ImageIcon(AssetImage('assets/images/Logout.png'),color: Colors.black,),
                             title: Text('Log Out',style: TextStyle(fontSize: 16),),
                             trailing: Icon(Icons.navigate_next_rounded),
                           ),
