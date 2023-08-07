@@ -14,6 +14,7 @@ class _NewUserHomeState extends State<NewUserHome> {
     'assets/images/cartify.jpeg',
     'assets/images/fresher.jpg',
     'assets/images/fresh.jpg',
+    'assets/images/redmart.jpg',
     // Add more logo paths as needed
   ];
 
@@ -36,7 +37,7 @@ class _NewUserHomeState extends State<NewUserHome> {
                     children: [
                       Container(
                         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                        height: 150,
+                        height: 120,
                         child: Image.asset('assets/images/person1.png'),
                       ),
                       Column(
@@ -128,7 +129,7 @@ class _NewUserHomeState extends State<NewUserHome> {
                   ),
                 ),
                 SizedBox(height: 10),
-                // Customized ListTiles
+               /* // Customized ListTiles
                 CustomizedListTile(
                   imageAsset: 'assets/images/redmart.jpg',
                   title: 'RM3 Voucher by RedMart',
@@ -189,6 +190,9 @@ class _NewUserHomeState extends State<NewUserHome> {
                     ),
                   ),
                 ),
+                */
+
+
               ],
             ),
           ),

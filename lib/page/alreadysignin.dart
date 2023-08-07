@@ -36,13 +36,13 @@ class AlreadySignin extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Urbanist',
                       fontWeight: FontWeight.w800,
-                      fontSize: 35,
+                      fontSize: 27,
                     ),
                   ),
                 ),
                 SizedBox(height:2),
                 Image.asset('assets/images/Welcome-Screen-Graphic.jpg',
-                height:430,
+                height:400,
                 ),
                   SizedBox(height: 5),
                 MyButton(
@@ -58,7 +58,7 @@ class AlreadySignin extends StatelessWidget {
                         color: Colors.black,
                         fontFamily: 'Urbanist',
                         fontWeight: FontWeight.bold,
-                        fontSize: 20
+                        fontSize: 12
                       ),
                     ),
                     const SizedBox(width:4),
